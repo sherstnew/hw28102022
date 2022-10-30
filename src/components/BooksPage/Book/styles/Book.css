@@ -1,0 +1,36 @@
+.book-list__book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 855px;
+    height: 194px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 0px 0px 20px 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+.book__name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.book__author {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+}
+.book__genre {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+}
+.book__stars {
+    margin-left: 20px;
+}
+.book__cost {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px;
+}

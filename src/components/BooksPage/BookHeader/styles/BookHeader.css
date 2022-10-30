@@ -1,0 +1,23 @@
+.main__header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    background: #000;
+}
+.header__header {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+.header__cart-icon {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,10 @@
+.genres-list__genre {
+    color: #000;
+    font-size: 16px;
+    margin: 20px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.genres-list__genre_selected {
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    background: #E9E9E9;
+}
+
+.main__lists {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin: 100px 0px 0px 0px;
+}
+
+.lists__genres-list {
+    width: 300px;
+    height: 659px;
+    background: #fff;
+    border-radius: 8px;
+}
