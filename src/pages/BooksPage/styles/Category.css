@@ -1,10 +1,10 @@
-.genres-list__genre {
+.category-list__category {
     color: #000;
     font-size: 16px;
     margin: 20px 0px 0px 0px;
     cursor: pointer;
 }
 
-.genres-list__genre_selected {
+.category-list__category_selected {
     font-weight: bold;
 }

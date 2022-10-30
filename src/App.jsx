@@ -1,8 +1,8 @@
 import { BooksPage } from './pages/BooksPage/BooksPage';
-import { BookPage } from './pages/BookPage/BookPage';
+// import { BookPage } from './pages/BookPage/BookPage';
 import { books } from './constants/books'
-import { genres } from './constants/genres'
+import { categories } from './constants/categories'
 
 export const App = () => {
-    return <BooksPage genres={ genres } books={ books }></BooksPage>
+    return <BooksPage categories={ categories } books={ books }></BooksPage>
 }

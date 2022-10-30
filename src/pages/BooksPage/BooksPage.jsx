@@ -1,27 +1,29 @@
-import { Book } from '../../components/BooksPage/Book/Book';
-import { Genre } from '../../components/BooksPage/Genre/Genre';
+import { useState } from 'react';
+import { BookList } from '../../components/BooksPage/BookList/BookList/BookList';
 import { BookHeader } from '../../components/BooksPage/BookHeader/BookHeader'
+import './styles/CategoryList.css'
+import './styles/Category.css'
 
-import './BooksPage.css';
+import './styles/BooksPage.css';
 
 export const BooksPage = props => {
 
-    let genres_key = 0;
-    let books_key = 0;
+    const [activeCategory, setActiveCategory] = useState(props.categories[0]);
+
+    let category_key = 0
 
     return <main className="main">
         <BookHeader></BookHeader>
         <div className='main__lists'>
-            <ul className="lists__genres-list">
+            <ul className='lists__category-list'>
                 {
-                    props.genres.map((genre) => <Genre key={ genres_key++ } gcount={ genres_key++ } genre={genre}></Genre>)
+                    props.categories.map((category) => <li key={category_key++} className={ ( category === activeCategory ? 'category-list__category category-list__category_selected' : 'category-list__category' ) } onClick={() => setActiveCategory(category)}>{category}</li>)
                 }
             </ul>
-            <ul className='lists__book-list'>
-                {
-                    props.books.map((book) => <Book key={ books_key++ } book={book}></Book>)
-                }
-            </ul>
+            <BookList activeCategory={ activeCategory } books={ props.books }></BookList>
         </div>
     </main>
 };
+
+// TODO:
+// Обновить моковые данные ок нигах, чтобы все категории были
