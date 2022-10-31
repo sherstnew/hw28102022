@@ -1,0 +1,33 @@
+.reviews__review {
+    display: flex;
+    justify-content: start;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 960px;
+    min-height: 100px;
+    border-radius: 8px;
+    background: #fff;
+    margin: 0px 0px 20px 0px;
+    padding: 20px;
+}
+
+.review__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+}
+
+.header__author {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header__stars {
+    font-weight: bold;
+}
+
+.review__text {
+    width: inherit;
+    font-size: 14px;
+}

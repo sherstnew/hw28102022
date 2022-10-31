@@ -1,0 +1,20 @@
+.book__annotation {
+    display: flex;
+    justify-content: start;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    width: 600px;
+    max-height: 150px;
+    border-radius: 8px;
+    background: #fff;
+    padding: 20px;
+}
+
+.annotation__header {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.annotation__text {
+    font-size: 14px;
+}

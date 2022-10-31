@@ -1,4 +1,4 @@
-.book-list__book-item {
+.book-list__book-item, .book__book-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,6 +9,11 @@
     border-radius: 8px;
     margin: 0px 0px 20px 0px;
     padding: 0px 20px 0px 20px;
+    cursor: pointer;
+}
+
+.book__book-item {
+    cursor: auto;
 }
 
 .book__name {

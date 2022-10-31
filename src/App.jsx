@@ -1,8 +1,11 @@
-import { BooksPage } from './pages/BooksPage/BooksPage';
-// import { BookPage } from './pages/BookPage/BookPage';
-import { books } from './constants/books'
-import { categories } from './constants/categories'
+import { useState } from 'react';
+
+import { Layout } from './components/Layout/Layout'
 
 export const App = () => {
-    return <BooksPage categories={ categories } books={ books }></BooksPage>
+
+    const [activePage, setActivePage] = useState('home');
+    const [activeBook, setActiveBook] = useState();
+
+    return <Layout activePage={ activePage } activeBook={ activeBook } setActivePage={ setActivePage } setActiveBook={ setActiveBook }></Layout>
 }
