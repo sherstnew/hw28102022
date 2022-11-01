@@ -1,15 +1,9 @@
-import './styles/Book.css';
-import { BookCounter  } from './BookCounter';
+import './Book.css';
+import { BookCounter  } from '../BookCounter/BookCounter';
 
 export const Book = props => {
-
-    const toBook = book => {
-        props.setActivePage('book')
-        props.setActiveBook(book)
-    }
-
     return <li className={ props.className }>
-    <div className="book-item__book" onClick={()=> toBook(props.book) }>
+    <div className="book-item__book">
             <div className="book__name">{ props.book.bookName }</div>
             <div className="book__author">{ props.book.author }</div>
             <div className="book__genre">{ props.book.genre }</div>

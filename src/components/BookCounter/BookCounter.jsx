@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import './styles/Counter.css';
+import './BookCounter.css';
 
 export const BookCounter = () => {
 

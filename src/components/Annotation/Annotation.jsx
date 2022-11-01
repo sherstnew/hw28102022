@@ -1,4 +1,4 @@
-import './styles/Annotation.css'
+import './Annotation.css'
 
 export const Annotation = props => {
     return <div className="book__annotation">

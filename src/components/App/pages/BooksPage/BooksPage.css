@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+    background: #E9E9E9;
+}
+
+.main__lists {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin: 100px 0px 0px 0px;
+}
+
+.lists__category-list {
+    background: #fff;
+    width: 300px;
+    height: 660px;
+    border-radius: 8px;
+}
+
+.category-list__category {
+    color: #000;
+    font-size: 16px;
+    margin: 20px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.category-list__category_selected {
+    font-weight: bold;
+}

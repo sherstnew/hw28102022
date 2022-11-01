@@ -1,7 +1,7 @@
-import { reviews } from "../../../constants/reviews";
-import { Review } from "./Review";
+import { reviews } from "../../constants/reviews";
+import { Review } from "../Review/Review";
 
-import './styles/Reviews.css';
+import './Reviews.css';
 
 export const Reviews = props => {
 

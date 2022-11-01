@@ -1,4 +1,4 @@
-import './styles/Review.css';
+import './Review.css';
 
 export const Review = props => {
     return <div className='reviews__review'>
