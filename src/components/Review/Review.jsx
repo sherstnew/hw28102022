@@ -8,4 +8,4 @@ export const Review = props => {
         </div>
         <div className="review__text">{ props.review.review }</div>
     </div>
-}
+};

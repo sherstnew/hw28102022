@@ -10,6 +10,6 @@ export const Book = props => {
             <div className="book__stars">{ props.book.stars }</div>
             <div className="book__cost">{ props.book.cost }</div>
     </div>
-    <BookCounter></BookCounter>
+    <BookCounter />
     </li>
 };

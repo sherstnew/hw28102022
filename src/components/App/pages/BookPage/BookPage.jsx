@@ -7,13 +7,13 @@ import './BookPage.css'
 
 export const BookPage = props => {
     return <main className="main">
-        <BookHeader></BookHeader>
+        <BookHeader />
         <div className="main__content">
             <div className="content__book">
-                <Book className='book__book-item' book={ props.book }></Book>
-                <Annotation annotation={ props.book.annotation }></Annotation>
+                <Book className='book__book-item' book={ props.book } />
+                <Annotation annotation={ props.book.annotation } />
             </div>
-            <Reviews book={ props.book } ></Reviews>
+            <Reviews book={ props.book } />
         </div>
     </main>
 }

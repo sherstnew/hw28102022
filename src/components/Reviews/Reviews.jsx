@@ -9,7 +9,7 @@ export const Reviews = props => {
 
     return <div className="content__reviews">
         {
-            reviews.map((review) => props.book.bookName === review.book ? <Review key={ review_key++ } review={ review }></Review> : '')
+            reviews.map((review) => props.book.bookName === review.book ? <Review key={ review_key++ } review={ review } /> : '')
         }
     </div>
 };

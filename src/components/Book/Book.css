@@ -3,8 +3,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 855px;
-    height: 194px;
+    max-width: 855px;
+    min-height: 194px;
     background: #fff;
     border-radius: 8px;
     margin: 0px 0px 20px 0px;
@@ -13,6 +13,10 @@
 }
 
 .book__book-item {
+    flex: 1;
+    max-width: 45%;
+    min-height: 200px;
+    margin: 0;
     cursor: auto;
 }
 
@@ -39,4 +43,16 @@
     font-weight: bold;
     font-size: 24px;
     margin-left: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .book-list__book-item {
+        justify-content: start;
+        max-width: 70vw;
+        min-height: 154px;
+        padding: 20px 20px 20px 20px;
+    }
+    .book__name {
+        width: 70vw;
+    }
 }

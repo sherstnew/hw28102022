@@ -5,7 +5,7 @@ import { books } from '../../constants/books';
 import { categories } from '../../constants/categories'
 
 export const Layout = props => {
-    return <BooksPage categories={ categories } books={ books }></BooksPage>
+    return <BooksPage categories={ categories } books={ books } />
     // поменять страницы
-    // return <BookPage book={ books[0] }></BookPage>
+    // return <BookPage book={ books[0] } />
 }
