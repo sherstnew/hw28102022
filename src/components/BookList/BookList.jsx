@@ -1,9 +1,18 @@
+import { useSelector } from "react-redux"
+
 import { Book } from "../Book/Book"
 
 export const BookList = props => {
-    return <ul className='lists__book-list'>
-        {
-            props.books.map((book) => book.category === props.activeCategory ? <Book className='book-list__book-item' key={ book.isbn } book={ book } /> : '')
-        }
-    </ul>
+
+    const books = useSelector(state => state.book.books)
+
+    if (!books) {
+        return null
+    } else {
+        return <ul className='lists__book-list'>
+            {
+                books.map((book) => book.category === props.activeCategory ? <Book className='book-list__book-item' key={ book.id } book={ book } /> : '')
+            }
+        </ul>
+    }
 }

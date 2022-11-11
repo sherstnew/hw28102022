@@ -1,15 +1,18 @@
-import { reviews } from "../../constants/reviews";
 import { Review } from "../Review/Review";
 
 import './Reviews.css';
 
 export const Reviews = props => {
 
-    let review_key = 0;
 
-    return <div className="content__reviews">
-        {
-            reviews.map((review) => props.book.bookName === review.book ? <Review key={ review_key++ } review={ review } /> : '')
-        }
-    </div>
+    if (props.book === undefined) {
+        return null;
+    } else {
+
+        return <div className="content__reviews">
+            {
+                props.book.reviews.map(review => <Review key={ review } review={ review } />)
+            }
+        </div>
+    }
 };

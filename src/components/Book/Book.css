@@ -1,4 +1,8 @@
-.book-list__book-item, .book__book-item {
+a {
+    color: #000;
+}
+
+.book-list__book-item, .book__book-item, .order-books__book-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,6 +10,7 @@
     max-width: 855px;
     min-height: 194px;
     background: #fff;
+    color: #000;
     border-radius: 8px;
     margin: 0px 0px 20px 0px;
     padding: 0px 20px 0px 20px;

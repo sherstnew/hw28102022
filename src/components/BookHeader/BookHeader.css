@@ -9,7 +9,7 @@
     height: 70px;
     background: #000;
 }
-.header__header {
+.header__header a {
     cursor: pointer;
     user-select: none;
     font-weight: 500;

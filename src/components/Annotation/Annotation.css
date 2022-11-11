@@ -14,8 +14,10 @@
 .annotation__header {
     font-weight: bold;
     font-size: 16px;
+    min-width: 100%;
 }
 
 .annotation__text {
     font-size: 14px;
+    min-width: 100%;
 }
