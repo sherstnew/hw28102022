@@ -9,6 +9,7 @@ import { loadBooksIfNotExist} from '../../store/book/loadBooksIfNotExist';
 import { loadCategories } from "../../store/categories/loadCategories";
 import { loadReviews } from "../../store/reviews/loadReviews";
 import { loadUsers } from "../../store/users/loadUsers";
+import { loadCartIfEmpty } from "../../store/cart/loadCartIfEmpty";
 
 import { BooksPage } from '../App/pages/BooksPage/BooksPage';
 import { BookPage } from '../App/pages/BookPage/BookPage';
@@ -23,6 +24,7 @@ export const Layout = props => {
         loadCategories(dispatch);
         loadReviews(dispatch);
         loadUsers(dispatch);
+        loadCartIfEmpty(dispatch);
 
         return undefined;
     }, []);

@@ -1,4 +1,5 @@
 import { startLoading, successLoading, failLoading} from ".";
+import { prepareData } from "../utils";
 
 export const loadUsers = (dispatch) => {
 
@@ -7,7 +8,7 @@ export const loadUsers = (dispatch) => {
   fetch("http://localhost:3001/api/users")
   .then((response) => response.json())
   .then((users) => {
-    dispatch(successLoading(users));
+    dispatch(successLoading(prepareData(users)));
   })
   .catch(() => {
     dispatch(failLoading());

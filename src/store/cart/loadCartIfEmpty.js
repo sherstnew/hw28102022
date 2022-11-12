@@ -1,10 +1,17 @@
-import { prepareCart, failLoading } from ".";
+import { startLoading, successLoading, failLoading} from ".";
+import { prepareData } from "../utils";
 
-export const loadCartIfEmpty = (dispatch, books) => {
+export const loadCartIfEmpty = (dispatch) => {
 
-    if (!books) {
-        failLoading();
-    } else {
-        dispatch(prepareCart(books));
-    }
+  dispatch(startLoading())
+
+  fetch("http://localhost:3001/api/books")
+  .then((response) => response.json())
+  .then((books) => {
+    dispatch(successLoading(prepareData(books)));
+  })
+  .catch(() => {
+    dispatch(failLoading());
+  });
+
 };

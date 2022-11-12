@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux"
+import { selectBooks } from "../../store/book/selectors"
 
 import { Book } from "../Book/Book"
 
 export const BookList = props => {
 
-    const books = useSelector(state => state.book.books)
+    const books = useSelector(state => selectBooks(state))
 
     if (!books) {
         return null

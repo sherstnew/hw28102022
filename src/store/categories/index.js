@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { Statuses } from "../../constants/statuses";
 
 const initialState = {
-  categories: [],
+  entities: {},
+  ids: [],
   status: Statuses.idle,
 };
 
@@ -14,7 +15,8 @@ export const categorySlice = createSlice({
       state.status = Statuses.inProgress;
     },
     successLoading: (state, action) => {
-      state.categories = action.payload;
+      state.entities = action.payload.entities;
+      state.ids = action.payload.ids;
       state.status = Statuses.success;
     },
     failLoading: (state) => {

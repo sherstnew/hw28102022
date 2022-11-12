@@ -7,15 +7,15 @@ import { Annotation } from "../../../Annotation/Annotation";
 import { Reviews } from "../../../Reviews/Reviews";
 
 import './BookPage.css';
+import { selectBook } from "../../../../store/book/selectors";
 
 export const BookPage = props => {
 
     const params = useParams();
 
-    const books = useSelector(state => state.book.books);
-    const book = books.find(item => item.id === params.bookId);
+    const book = useSelector(state => selectBook(state, params.bookId));
 
-    if (books.length === 0) {
+    if (book === undefined) {
         return null;
     } else {
         return <main className="main">

@@ -1,14 +1,16 @@
 import { useSelector } from 'react-redux';
+import { selectBooks } from '../../store/book/selectors';
+import { selectCart } from '../../store/cart/selectors';
 
 import './Order.css';
 
 export const Order = () => {
 
-    const cart = useSelector(state => state.cart.cart)
-    const books = useSelector(state => state.book.books)
+    const cart = useSelector(state => selectCart(state));
+    const books = useSelector(state => selectBooks(state));
 
-    let order_counter = 0
-    let total = 0
+    let order_counter = 0;
+    let total = 0;
 
     cart.map(cartItem => cartItem.amount !== 0 ? total += cartItem.amount * books.find(book => cartItem.id === book.id).cost : total += 0)
 

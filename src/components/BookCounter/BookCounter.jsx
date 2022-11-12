@@ -1,15 +1,16 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { incBook, decBook} from '../../store/cart';
+import { selectCart } from '../../store/cart/selectors';
 
 import './BookCounter.css';
 
 export const BookCounter = props => {
 
     const dispatch = useDispatch();
-    const cart = useSelector(state => state.cart.cart);
+    const cart = useSelector(state => selectCart(state));
 
-    if (cart === undefined) {
+    if (cart.length === 0) {
         return null;
     } else {
     return <div className="book-item__counter">

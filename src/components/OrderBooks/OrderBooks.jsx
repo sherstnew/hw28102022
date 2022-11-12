@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
-import book from '../../store/book';
+import { selectBooks } from '../../store/book/selectors';
+import { selectCart } from '../../store/cart/selectors';
 
 import { Book } from '../Book/Book';
 
@@ -7,8 +8,8 @@ import './OrderBooks.css';
 
 export const OrderBooks = () => {
 
-    const cart = useSelector(state => state.cart.cart)
-    const books = useSelector(state => state.book.books)
+    const cart = useSelector(state => selectCart(state))
+    const books = useSelector(state => selectBooks(state))
 
     return <div className="order-box__order-books">
         {

@@ -1,5 +1,6 @@
 import { startLoading, successLoading, failLoading} from ".";
 import { loadCartIfEmpty } from "../cart/loadCartIfEmpty";
+import { prepareData } from "../utils";
 
 export const loadBooksIfNotExist = (dispatch) => {
 
@@ -8,7 +9,7 @@ export const loadBooksIfNotExist = (dispatch) => {
   fetch("http://localhost:3001/api/books")
   .then((response) => response.json())
   .then((books) => {
-    dispatch(successLoading(books));
+    dispatch(successLoading(prepareData(books)));
     loadCartIfEmpty(dispatch, books)
   })
   .catch(() => {

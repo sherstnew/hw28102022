@@ -1,14 +1,15 @@
 import { useSelector } from 'react-redux';
+import { selectReview } from '../../store/reviews/selectors';
+import { selectUsers } from '../../store/users/selectors';
 
 import './Review.css';
 
 export const Review = props => {
 
-    const reviews = useSelector(state => state.reviews.reviews);
-    const review = reviews.find(rev => rev.id === props.review);
-    const users = useSelector(state => state.users.users);
+    const review = useSelector(state => selectReview(state, props.review));
+    const users = useSelector(state => selectUsers(state));
 
-    if (reviews.length === 0 || users.length === 0 || review === undefined) {
+    if (users.length === 0 || review === undefined) {
         return null;
     } else {
 

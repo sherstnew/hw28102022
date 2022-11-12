@@ -4,26 +4,32 @@ import { Statuses } from "../../constants/statuses";
 const cartSlice = createSlice({
   name: "slice",
   initialState: {
-    cart: [],
+    entities: {},
+    ids: [],
     status: Statuses.idle,
   },
   reducers: {
     incBook: (state, action) => {
-      state.cart.find(cartItem => cartItem.id === action.payload.id).amount += 1;
+      state.entities.find(cartItem => cartItem.id === action.payload.id).amount += 1;
     },
     decBook: (state, action) => {
-      state.cart.find(cartItem => cartItem.id === action.payload.id).amount -= 1;
+      state.entities.find(cartItem => cartItem.id === action.payload.id).amount -= 1;
     },
-    prepareCart: (state, action) => {
+    startLoading: (state) => {
+      state.status = Statuses.inProgress;
+    },
+    successLoading: (state, action) => {
       let cart = [];
-      action.payload.forEach(book => {
+      for (let key in action.payload.entities) {
         let cartItem = {
-          id: book.id,
-          amount: 0
+          id: key,
+          amount: 0,
         };
         cart.push(cartItem);
-      });
-      state.cart = cart;
+      };
+      state.entities = cart;
+      state.ids = action.payload.ids;
+      state.status = Statuses.success;
     },
     failLoading: (state, action) => {
       state.status = Statuses.failed;
@@ -31,6 +37,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const {incBook, decBook, prepareCart, failLoading} = cartSlice.actions;
+export const {incBook, decBook, startLoading, successLoading, failLoading} = cartSlice.actions;
 
 export default cartSlice.reducer;
